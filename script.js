@@ -30,7 +30,7 @@ const data = [
 ];
 
 const days = document.querySelectorAll(".day");
-console.log(days);
+// console.log(days);
 
 let max;
 const maxHeight = 160;
@@ -40,15 +40,15 @@ data.forEach((element) => {
 		max = element.amount;
 	}
 });
-console.log(max);
+// console.log(max);
 
 const dayProgress = document.querySelectorAll(".day__progress");
 
 for (let i = 0; i < data.length; i++) {
 	const percentage = (data[i].amount / max) * 100;
-	console.log("PERCENTAGE: ", percentage);
+	// console.log("PERCENTAGE: ", percentage);
 	const height = (percentage * maxHeight) / 100;
-	console.log(height);
+	// console.log(height);
 	dayProgress[i].style.height = height + "px";
 }
 
@@ -67,6 +67,6 @@ const hoverEffect = (_day, _amount) => {
 };
 
 data.forEach((element) => {
-	console.log(element.day);
+	// console.log(element.day);
 	hoverEffect(element.day, element.amount);
 });
