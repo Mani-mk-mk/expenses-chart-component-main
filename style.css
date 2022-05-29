@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap");
+
+:root {
+	--soft-red: hsl(10, 79%, 65%);
+	--cyan: hsl(186, 34%, 60%);
+	--dark-brown: hsl(25, 47%, 15%);
+	--medium-brown: hsl(28, 10%, 53%);
+	--cream: hsl(27, 66%, 92%);
+	--very-pale-orange: hsl(33, 100%, 98%);
+	--font-size-body: 18px;
+	--font-family: "DM Sans", sans-serif;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: var(--font-family);
+	font-size: var(--font-size-body);
+	min-height: 100vh;
+	display: flex;
+	/* flex-direction: column; */
+	justify-content: center;
+	align-items: center;
+	background-color: var(--very-pale-orange);
+}
+
+.container {
+	/* border: 2px solid red; */
+	width: 100%;
+	margin-inline: 8%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	/* margin: 50% 8%; */
+}
+
+.top {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	background-color: var(--soft-red);
+	border-radius: 0.5rem;
+	padding: 0.5rem 0.75rem;
+	margin-block: 0.8rem;
+	box-shadow: 0 0 3px 0px #cfcfcf;
+}
+
+.top :first-child {
+	color: var(--cream);
+	font-size: 13px;
+}
+
+.top :last-child {
+	color: var(--very-pale-orange);
+	/* font-size: var(--font-size-body); */
+}
+
+.bottom {
+	/* border: 2px solid red; */
+	border-radius: 0.5rem;
+	background-color: white;
+	padding: 0.5rem 0.75rem;
+	width: 100%;
+	box-shadow: 0 0 3px 0px #cfcfcf;
+}
+
+.bottom__header {
+	padding-block: 0.8rem;
+}
+
+.bottom__day {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	height: 225px;
+	/* padding-block: 2.5rem 1rem; */
+	/* height: 100%; */
+	/* border-bottom */
+}
+
+.day {
+	width: 40px;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	color: var(--medium-brown);
+}
+
+.day__amount {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 50px;
+	height: 28px;
+	font-size: 14px;
+	color: white;
+	background-color: var(--dark-brown);
+	border-radius: 0.2rem;
+	margin-block: 0.5rem;
+	display: none;
+}
+
+.day__progress {
+	max-height: 200px;
+	width: inherit;
+	background: var(--soft-red);
+	border-radius: 0.5rem;
+	cursor: pointer;
+}
+
+.day__wed .day__progress {
+	background: var(--cyan);
+}
+
+.bottom hr {
+	border: 0;
+	margin: 0.5rem 0;
+	height: 3px;
+	background-color: hsla(0, 7%, 80%, 0.29);
+}
+
+.bottom__footer {
+	padding-block: 0.25rem 0.5rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.footer__left :first-child,
+.footer__right :last-child {
+	font-size: 13px;
+	color: var(--medium-brown);
+}
+
+.footer__right h4 {
+	text-align: right;
+}
+
+.attribution {
+	margin: 1.25rem 1rem;
+}
+
+.attribution__challenge,
+.attribution__coder {
+	font-size: 18px;
+	color: var(--medium-brown);
+}
+
+.attribution__challenge a,
+.attribution__coder a {
+	font-weight: bolder;
+	text-decoration: none;
+	cursor: pointer;
+	color: var(--dark-brown);
+}
+
+.attribution__challenge a :hover,
+.attribution__coder a :hover {
+	opacity: 0.8;
+	text-decoration: underline;
+}
